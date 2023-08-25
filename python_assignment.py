@@ -5,6 +5,7 @@ class Flight:
         self.start_time = start_time
         self.priority = priority
 
+#Table Classes
 class FlightTable:
     def __init__(self):
         self.flights = []
@@ -12,6 +13,7 @@ class FlightTable:
     def add_flight(self, flight):
         self.flights.append(flight)
 
+    #Sorting Content
     def sort_by_p_id(self):
         for i in range(len(self.flights)):
             for j in range(i + 1, len(self.flights)):
@@ -30,6 +32,8 @@ class FlightTable:
             for j in range(i + 1, len(self.flights)):
                 if priority_mapping[self.flights[i].priority] > priority_mapping[self.flights[j].priority]:
                     self.flights[i], self.flights[j] = self.flights[j], self.flights[i]
+
+    #Displaying Data
 
     def display(self):
         print("{:<5} {:<10} {:<15} {:<10}".format("P_ID", "Process", "Start Time", "Priority"))
@@ -56,5 +60,5 @@ elif sorting_parameter == 3:
     flight_table.sort_by_priority()
 else:
     print("Invalid sorting parameter")
-    
+
 flight_table.display()
