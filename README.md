@@ -1,2 +1,2 @@
 # lab-03-assignment
-#Adding this to check if my git is working.
+#this is my first edit into the readme file
